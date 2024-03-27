@@ -164,7 +164,7 @@ abstract class BaseRepository implements BaseRepositoryInterface
         return $result;
     }
 
-    public function delete(string $id)
+    public function destroy(string $id)
     {
         $this->newQuery();
 
@@ -173,7 +173,7 @@ abstract class BaseRepository implements BaseRepositoryInterface
         return $result->delete();
     }
 
-    public function deleteMultipleByIds($ids)
+    public function destroyMultipleByIds($ids)
     {
         return $this->model->destroy($ids);
     }
