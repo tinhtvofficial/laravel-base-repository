@@ -4,14 +4,6 @@
     "require": {
         "php": ">=5.4.0"
     },
-    "minimum-stability": "dev",
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Luuka\\LaravelBaseRepository\\RepositoryServiceProvider"
-            ]
-        }
-    },
     "autoload": {
         "psr-4": {
             "Luuka\\LaravelBaseRepository\\": "src/"
