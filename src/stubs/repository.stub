@@ -1,15 +1,14 @@
 <?php
 
-namespace Luuka;
+namespace DummyNamespace;
 
 use Luuka\LaravelBaseRepository\Repository\BaseRepository;
 //use Your Model
 
 /**
- * Class {Name}Repository.
- * ex, UserRepository
+ * Class DummyClass
  */
-class {Name}Repository extends BaseRepository
+class DummyClass extends BaseRepository
 {
     /**
      * @return string
