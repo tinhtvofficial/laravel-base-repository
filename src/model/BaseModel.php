@@ -1,6 +1,6 @@
 <?php
 
-namespace Luuka\LaravelBaseModel\Model;
+namespace Luuka\Model;
 
 use Luuka\Traits\Filterable;
 use Luuka\Traits\Sortable;

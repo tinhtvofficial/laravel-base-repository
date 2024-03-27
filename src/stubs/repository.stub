@@ -6,10 +6,10 @@ use Luuka\LaravelBaseRepository\Repository\BaseRepository;
 //use Your Model
 
 /**
- * Class {{ Name }}Repository.
+ * Class DemoRepository.
  * ex, UserRepository
  */
-class {{ Name }}Repository extends BaseRepository
+class DemoRepository extends BaseRepository
 {
     /**
      * @return string
