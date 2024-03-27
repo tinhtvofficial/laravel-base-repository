@@ -1,0 +1,29 @@
+{
+    "name": "luuka/laravel-base-repository",
+    "description": "A simple package to create a make:repository command for Laravel",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Luuka\\LaravelBaseRepository\\": "src/"
+        },
+        "classmap": ["src/"]
+    },
+    "authors": [
+        {
+            "name": "Trương Tỉnh",
+            "email": "tinhtv1910@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Luuka\\LaravelBaseRepository\\\\RepositoryServiceProvider"
+            ]
+        }
+    }
+}

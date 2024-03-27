@@ -1,0 +1,22 @@
+<?php
+
+namespace Luuka;
+
+use Luuka\LaravelBaseRepository\Repository\BaseRepository;
+//use Your Model
+
+/**
+ * Class {{ Name }}Repository.
+ * ex, UserRepository
+ */
+class {{ Name }}Repository extends BaseRepository
+{
+    /**
+     * @return string
+     *  Return the model
+     */
+    public function model()
+    {
+        //return YourModel::class;
+    }
+}
