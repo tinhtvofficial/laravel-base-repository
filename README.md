@@ -147,7 +147,7 @@ class SettingController extends Controller
     {
         $users = $this->userRepository->getAll($request->all());
 
-        return view('backend.pages.settings.index', compact('users'));
+        return view('backend.pages.users.index', compact('users'));
     }
 }
 
