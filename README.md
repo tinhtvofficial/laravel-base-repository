@@ -88,8 +88,67 @@ use Luuka\LaravelBaseModel\Model\BaseModel;
 
 class YourModel extends BaseModel
 {
-   // code
+	// Filter with variable
+	protected $filterable = ['name'];
+	
+	// Sort with variable;
+	protected $sortable = ['name' => 'desc'];
+
+    // Custom filter
+    public function filterSearch($query, $value)
+    {
+        return $query->where('name', 'LIKE', '%' . $value . '%');
+    }
+	
+	// Custom sorts
+    public function sortName($query)
+    {
+        return $query->orderBy('name', 'desc');
+    }
 }
 
+
+```
+
+```
+
+<form action="your_url" method="POST/GET">
+	
+	// Filter by name with name prefix
+	<input type="text" name="search" placeholder="search by name">
+	
+	<button>Submit</button>
+	
+</form>
+
+```
+
+## BASE USAGE
+
+```
+<?php
+
+namespace App\Http\Controllers\Backend;
+
+use App\Http\Controllers\Controller;
+use App\Repositories\UserRepository;
+use Illuminate\Http\Request;
+
+class SettingController extends Controller
+{
+    protected $userRepository;
+
+    public function __construct(UserRepository $userRepository)
+    {
+        $this->userRepository = $userRepository;
+    }
+
+    public function index(Request $request)
+    {
+        $users = $this->userRepository->getAll($request->all());
+
+        return view('backend.pages.settings.index', compact('users'));
+    }
+}
 
 ```
